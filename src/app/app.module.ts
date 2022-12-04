@@ -15,6 +15,9 @@ import { PaginationUnroutedComponent } from './component/shared/pagination-unrou
 import { PaginationService } from './service/pagination.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PostService } from './service/Post.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UserPlistAdminComponent } from './component/user/UserPlistAdmin/UserPlistAdmin.component';
+import { UserService } from './service/User.service';
 
 
 
@@ -26,18 +29,21 @@ import { PostService } from './service/Post.service';
     PostPlistAdminComponent,
     SearchUnroutedComponent,
     DropdownRegisterPageComponent,
-    PaginationUnroutedComponent
+    PaginationUnroutedComponent,
+    UserPlistAdminComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [   
     PaginationService,
-    PostService
+    PostService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
